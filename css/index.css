@@ -1,0 +1,263 @@
+*{
+    box-sizing: border-box;
+}
+.section{
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 100%;
+}
+.header{
+    width: 100%;
+    position: relative;
+    margin-top: 20px;
+    height: 130px;
+}
+.logo{
+    display: inline;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    position: absolute;
+    height: 50px;
+    left: 10%;
+}
+.menu{
+    display: inline;
+    position: absolute;
+    height: 50px;
+    position: absolute;
+    right: 10%;
+    top: 5px;
+    justify-content: flex-end;
+    cursor: pointer;
+}
+.landing{
+    width: 100%;
+    position: relative;
+    height: calc(61vh - 64px);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.landing div{
+    width: 100%;
+    height: 500px;
+    background-image: url("https://ivkovic.me/themes/leon/img/mountain.jpg");
+    background-repeat: no-repeat;
+}
+.welcome{
+    color: #10CAB7;
+    position:  absolute;
+    top: -5%;
+    font-size: 38px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+}
+.intro{
+    position: absolute;
+    font-size: 10px;
+}
+.square{
+    width: calc(100% / 3);
+    height: 200px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    position: relative;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.square h4{
+    display: block;
+}
+.square p{
+    font-size: 15px;
+width: 100%;
+margin: 20px;
+}
+.square.one::before{
+    content: "\f0d0";
+    font:40px FontAwesome;
+    font-weight: 400;
+    color: #10CAB7;
+    position: absolute;
+    margin-top: 5px;
+}
+.square.two::before{
+    content: "\f219";
+    font:40px FontAwesome;
+    font-weight: 400;
+    color: #10CAB7;
+    position: absolute;
+    margin-top: 5px;
+}
+.square.three::before{
+    content: "\f0ac";
+    font:40px FontAwesome;
+    font-weight: 400;
+    color: #10CAB7;
+    position: absolute;
+    margin-top: 5px;
+}
+.square:hover{
+    box-shadow: 2px 2px 10px black;
+    cursor: pointer;
+}
+@media (max-width: 767px){
+    .intro{
+    top: 15%;
+    }
+    .square{
+        width: 100%;
+        position: absolute;
+    }
+    .square.one{
+        top: 700px;
+    }
+    .square.two{
+        top: 900px;
+    }
+    .square.three{
+        top: 1100px;
+    }
+    .squares{
+        width: 100%;
+        height: 800px;
+    }
+    .container{
+        grid-template-columns: repeat(1 , 1fr);
+        grid-template-rows: repeat(5 , 2fr);
+        gap: 10px;
+        grid-template-areas: "one" "two" "three" "four" "mountain";
+    }
+    .mountain img{
+        position: absolute;
+        left: 25%;
+    }
+}
+@media (min-width: 768px){
+    .intro{
+    top: 15%;
+    }
+    .square{
+        position: absolute;
+        top: 700px;
+        width: calc(100% / 3);
+    }
+    .square.two{
+        left: calc(100% /3);
+    }
+    .square.three{
+        left: calc(100% / 1.5);
+    }
+    .squares{
+        width: 100%;
+        height: 300px;
+    }
+    .container{
+        grid-template-columns: repeat(6 , 1fr);
+        grid-template-rows: repeat(2 , 1fr);
+        gap: 10px;
+        grid-template-areas: "one one one two two two mountain mountain" " three three three four four four mountain mountain ";
+    
+    }
+}
+.serviceop{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+.serviceop h1{
+    color: #eee;
+    opacity: 0.6;
+    font-family: sans-serif;
+    font-size: 150px;
+    position: absolute;
+    top: -100px;
+    transform: translate(5%,50%);
+}
+.serviceop h2{
+    position: absolute;
+    top: 40%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.service{
+    width: 100%;
+}
+.second{
+    position: relative;
+    height: 500px;
+    width: 100%;
+}
+.second .servise{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+}
+.servise h4{
+    font-size: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.servise p{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 12px;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    display: grid;
+}
+.mountain{
+    display: inline;
+    grid-area: mountain;
+
+}
+.servise{
+    display: inline-block;
+    position: relative;
+    height: 200px;
+}
+.first.servise{
+    grid-area: one;
+}
+.second.servise{
+    grid-area: two;
+}
+.third.servise{
+    grid-area: three;
+}
+.fourth.servise{
+    grid-area: four;
+}
+.first.servise::before{
+    content: "\f040";
+    font: 40px FontAwesome;
+    color: #10CAB7;
+    position: absolute;
+    top: 10px;
+}.second.servise::before{
+    content: "\f0c1";
+    font: 40px FontAwesome;
+    color: #10CAB7;
+    position: absolute;
+    top: 10px;
+}.third.servise::before{
+    content: "\f1de";
+    font: 40px FontAwesome;
+    color: #10CAB7;
+    position: absolute;
+    top: 10px;
+}.fourth.servise::before{
+    content: "\f109";
+    font: 40px FontAwesome;
+    color: #10CAB7;
+    position: absolute;
+    top: 10px;
+}
