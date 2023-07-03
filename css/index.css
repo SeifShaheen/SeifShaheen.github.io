@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 body{
-    width: 100%;
+    min-width: 100%;
 }
 .section{
     margin-right: auto;
@@ -223,7 +223,7 @@ margin: 20px;
         top: 20px;
     }
 .serviceop h1{
-    color: #eee;
+    color: #ccc;
     opacity: 0.6;
     font-family: sans-serif;
     font-size: 65px;
@@ -293,4 +293,119 @@ margin: 20px;
 }
 .fourth.servise{
     grid-area: four;
+}
+.portfolio{
+    background-color: #eee;
+}
+.porto{
+    display: inline;
+}
+.contain div{
+    background-color: #fff;
+    box-shadow: #000 1px 1px 10px;
+    overflow: hidden;
+    transition: 1s;
+}
+.contain img:hover{
+    scale: 1.2;
+}
+.porto h2{
+    margin-left: 10px;
+}
+.porto p{
+    margin-left: 10px;
+}
+.porto img{
+    width: 100%;
+    height: 100%;
+}
+.contain{
+    display: inline;
+}
+.portfolio{
+    padding: 15px;
+    position: relative;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.but{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: transparent !important;
+    align-content: center;
+    box-shadow: none !important;
+}
+.more{
+    background-color: transparent;
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 900;
+    font-size: 10px;
+    width: 100px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    transition: background-color 1s;
+
+}
+.more:hover{
+    color: #10CAB7;
+    background-color: #304B58;
+}
+.portof{
+    text-align: center;
+}
+.portof h1{
+    color: #aaa;
+    opacity: 0.6;
+    font-family: sans-serif;
+    font-size: 50px;
+}
+.hello h2{
+    position: absolute;
+    top: -90%;
+}
+.hello
+{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 100px;
+}
+@media (max-width: 767px){
+    .portfolio{
+        margin-top: 700px;
+    }
+    .contain{
+        display: block;
+    }
+    .fr ,.sc , .th{
+        width: calc(100% /3);
+    }
+}
+@media (min-width: 768px)
+{
+    .photo1 ,.photo2 ,.photo3{
+        display: inline-block;
+    }
+    .porto{
+        width: calc(100% / 3 - 150px);
+        display: inline-block;
+        height: 400px;
+    }
+    .contain{
+        width: 100%;
+    }
+    .fr{
+        margin: 20px 10px;
+        margin-left: 10%;
+    }
+    .sc{
+        margin: 20px 10px;
+    }
+    .th{
+        margin: 20px 10px;
+    }
 }
