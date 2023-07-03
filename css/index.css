@@ -38,7 +38,6 @@ body{
 .landing{
     width: 100%;
     position: relative;
-    height: calc(61vh - 64px);
     text-align: center;
     display: flex;
     justify-content: center;
@@ -190,6 +189,9 @@ margin: 20px;
         grid-template-rows: repeat(2 , 1fr);
         gap: 10px;
         grid-template-areas: "one one one two two two mountain mountain" " three three three four four four mountain mountain ";
+    }
+    .container .mountain{
+        margin-top: 30px;
     }
     .first.servise::before{
         content: "\f040";
