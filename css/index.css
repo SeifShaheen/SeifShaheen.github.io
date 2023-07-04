@@ -1,10 +1,10 @@
 *{
     box-sizing: border-box;
     scroll-behavior: smooth;
+    transition: 0.5s;
 }
 body{
     width: 100%;
-    transition: 1s 1s;
     overflow-x: hidden;
 }
 .header{
@@ -38,11 +38,16 @@ li{
 a{
     text-decoration: none;
 }
+.nav h6{
+    position: absolute;
+    bottom: 10px;
+}
 .nav img{
     background-color: #37505E;
     border: 0;
     margin-top: 10px;
     margin-left: 20px;
+    cursor: pointer;
 }
 .contactm{
     font-size: 25px;
@@ -51,12 +56,11 @@ a{
     font-size: 25px;
 }
 .nav{
-    opacity: 0;
-    position: absolute; 
+    display: none;
+    transition: all 1s;
 }
 .nav-open .nav{
-    opacity: 1;
-    position: absolute;
+    display: unset;
     top: 0;
     right: 0;
     transition: transform 1s;
@@ -64,7 +68,6 @@ a{
     min-width: fit-content;
     padding: 10px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    height:fit-content;
     z-index: 100;
     width: calc(100% /3);
     opacity: 0.9;
@@ -140,7 +143,9 @@ margin: 20px;
     box-shadow: 2px 2px 10px black;
     cursor: pointer;
 }
-
+ul li:hover{
+    color: #10CAB7;
+}
 @media (max-width: 300px){
     ul h4 ,ul h6{
         margin-left: -20px;
@@ -436,6 +441,7 @@ margin: 20px;
     box-shadow: #000 1px 1px 10px;
     overflow: hidden;
     transition: 1s;
+    height: 100%;
 }
 .contain img:hover{
     scale: 1.2;
@@ -516,6 +522,9 @@ margin: 20px;
     .fr ,.sc , .th{
         width: calc(100% /3);
     }
+    .photo1 ,.photo2 ,.photo3{
+        display: flex;
+    }
 }
 @media (min-width: 301px){
     .portfolio{
@@ -527,11 +536,14 @@ margin: 20px;
     .fr ,.sc , .th{
         width: calc(100% /3);
     }
+    .photo1 ,.photo2 ,.photo3{
+        display: flex;
+    }
 }
 @media (min-width: 768px)
 {
     .photo1 ,.photo2 ,.photo3{
-        display: inline-block;
+        display: flex;
     }
     .porto{
         width: calc(100% / 3 - 150px);
@@ -554,7 +566,9 @@ margin: 20px;
         margin: 20px 10px;
     }
     .fr ,.sc , .th{
-        width: calc(100% /3 - 10%);
-        padding: 10px;
+        width: calc(100% /3 - 8%);
     }
+}
+a:hover{
+    color: #10CAB7;
 }
