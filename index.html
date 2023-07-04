@@ -13,10 +13,32 @@
     <header>
     <div class="header">
         <a href="leon.html"><img src="assets/images/logo.png" alt="Logo" class="logo"></a>
-        <img src="https://ivkovic.me/themes/leon/img/menu.svg" alt="menu" class="menu">
+        <img onclick="toggleNav()" src="https://ivkovic.me/themes/leon/img/menu.svg" alt="menu" class="menu">
+    </div>
+    <div class="nav">
+        <img onclick="toggleNav()" src="https://ivkovic.me/themes/leon/img/x.svg" alt="close">
+        <ul class="menuu">
+            <h4>Menu</h4>
+            <a href="#one" style="transition-delay: 1s;"><li>Home</li></a>
+            <a href="#two"><li>Services</li></a>
+            <a href="#three"><li>Portfolio</li></a>
+            <a href="#four"><li>About</li></a>
+        </ul>
+        <ul class="contactm">
+            <h4>Get in touch</h4>
+            <a href="#five"><li>Contact Me</li></a>
+            <li></li>
+        </ul>
+        <ul class="getsocial">
+            <h4>Get Social</h4>
+            <a href=""><li>Behance</li></a>
+            <a href=""><li>Dribble</li></a>
+            <a href=""><li>Twitter</li></a>
+            <h6> &copy; Leon 2019 </h3>
+        </ul>
     </div>
 </header>
-    <div class="landing">
+    <div class="landing" id="one">
         <h3 class="welcome">Hello There!</h3>
         <h4 class="intro">We are Leon - Super Creative & Minimal <br> Agency Web Template</h4>
         <div></div> <!-- background -->
@@ -35,7 +57,7 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere debitis tenetur</p>
     </div>
 </section>
-<section class="service">
+<section class="service" id="two">
     <div class="serviceop">
         <h1>SERVICE</h1>
         <h2>Don't be busy, be productive</h2>
@@ -65,7 +87,7 @@
         </div>
     </div>
 </section>
-<section class="portfolio">
+<section class="portfolio" id="three">
     <div>
     <div class="portof" id="portifolio">
         <h1>Portfolio</h1>
@@ -102,5 +124,31 @@
     <br>
     </div>
 </section>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script>
+    function toggleNav() {
+      document.body.classList.toggle("nav-open");
+    }
+  </script>
 </body>
 </html>

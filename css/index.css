@@ -1,15 +1,11 @@
 *{
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 body{
-    min-width: 100%;
-}
-.section{
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: 15px;
-    padding-left: 15px;
     width: 100%;
+    transition: 1s 1s;
+    overflow-x: hidden;
 }
 .header{
     width: 100%;
@@ -26,14 +22,54 @@ body{
     left: 10%;
 }
 .menu{
-    display: inline;
-    position: absolute;
     height: 50px;
     position: absolute;
     right: 10%;
     top: 5px;
+    background-color: transparent;
     justify-content: flex-end;
     cursor: pointer;
+}
+li{
+    list-style: none;
+    color: white;
+    margin-left: -20px;
+}
+a{
+    text-decoration: none;
+}
+.nav img{
+    background-color: #37505E;
+    border: 0;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.contactm{
+    font-size: 25px;
+}
+.getsocial{
+    font-size: 25px;
+}
+.nav{
+    opacity: 0;
+    position: absolute; 
+}
+.nav-open .nav{
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: transform 1s;
+    background-color: #37505E;
+    min-width: fit-content;
+    padding: 10px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    height:fit-content;
+    z-index: 100;
+    width: calc(100% /3);
+    opacity: 0.9;
+    position: fixed;
+    height: 100%;
 }
 .landing{
     width: 100%;
@@ -104,7 +140,80 @@ margin: 20px;
     box-shadow: 2px 2px 10px black;
     cursor: pointer;
 }
-@media (max-width: 767px){
+
+@media (max-width: 300px){
+    ul h4 ,ul h6{
+        margin-left: -20px;
+        color: #7f97a9;
+    }
+    ul h4{
+        font-size: 20px;
+    }
+    ul li{
+        font-size: 20px;
+    }
+    .intro{
+        top: 15%;
+        }
+        .square{
+            width: 100%;
+            position: absolute;
+        }
+        .squares{
+            width: 100%;
+            height: 800px;
+        }
+        .container{
+            grid-template-columns: repeat(1 , 1fr);
+            grid-template-rows: repeat(5 , 2fr);
+            gap: 10px;
+            grid-template-areas: "one" "two" "three" "four" "mountain";
+            text-align: center;
+        }
+        .first.servise::before{
+            content: "\f040";
+            font: 40px FontAwesome;
+            color: #10CAB7;
+        }.second.servise::before{
+            content: "\f0c1";
+            font: 40px FontAwesome;
+            color: #10CAB7;
+        }.third.servise::before{
+            content: "\f1de";
+            font: 40px FontAwesome;
+            color: #10CAB7;
+        }.fourth.servise::before{
+            content: "\f109";
+            font: 40px FontAwesome;
+            color: #10CAB7;
+        }
+        .serviceop{
+            text-align: center;
+        }
+        .serviceop h1{
+            color: #666;
+            opacity: 0.6;
+            font-family: sans-serif;
+            font-size: 50px;
+        }
+        .serviceop h2{
+            position: absolute;
+            top: 48%;
+            font-size: 15px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+}
+@media (min-width: 301px){
+    ul h4 ,ul h6{
+        margin-left: -20px;
+        color: #7f97a9;
+    }
+    ul h4{
+        font-size: 20px;
+    }
+    ul li{
+        font-size: 20px;
+    }
     .intro{
     top: 15%;
     }
@@ -153,7 +262,7 @@ margin: 20px;
         text-align: center;
     }
     .serviceop h1{
-        color: #eee;
+        color: #666;
         opacity: 0.6;
         font-family: sans-serif;
         font-size: 50px;
@@ -166,6 +275,16 @@ margin: 20px;
     }
 }
 @media (min-width: 768px){
+    ul h4 ,ul h6{
+        margin-left: -20px;
+        color: #7f97a9;
+    }
+    ul h4{
+        font-size: 20px;
+    }
+    ul li{
+        font-size: 20px;
+    }
     .intro{
     top: 15%;
     }
@@ -176,9 +295,11 @@ margin: 20px;
     }
     .square.two{
         left: calc(100% /3);
+        top: 700px;
     }
     .square.three{
         left: calc(100% / 1.5);
+        top: 700px;
     }
     .squares{
         width: 100%;
@@ -223,7 +344,7 @@ margin: 20px;
         top: 20px;
     }
 .serviceop h1{
-    color: #ccc;
+    color: #666;
     opacity: 0.6;
     font-family: sans-serif;
     font-size: 65px;
@@ -358,14 +479,15 @@ margin: 20px;
     text-align: center;
 }
 .portof h1{
-    color: #aaa;
+    color: #666;
     opacity: 0.6;
     font-family: sans-serif;
     font-size: 50px;
 }
 .hello h2{
     position: absolute;
-    top: -90%;
+    top: -75%;
+    font-size: 15px;
 }
 .hello
 {
@@ -374,7 +496,18 @@ margin: 20px;
     position: relative;
     height: 100px;
 }
-@media (max-width: 767px){
+@media (max-width: 300px){
+    .portfolio{
+        margin-top: 700px;
+    }
+    .contain{
+        display: block;
+    }
+    .fr ,.sc , .th{
+        width: calc(100% /3);
+    }
+}
+@media (min-width: 301px){
     .portfolio{
         margin-top: 700px;
     }
@@ -393,7 +526,9 @@ margin: 20px;
     .porto{
         width: calc(100% / 3 - 150px);
         display: inline-block;
-        height: 400px;
+    }    
+    .portfolio{
+        margin-top: 0;
     }
     .contain{
         width: 100%;
@@ -407,5 +542,9 @@ margin: 20px;
     }
     .th{
         margin: 20px 10px;
+    }
+    .fr ,.sc , .th{
+        width: calc(100% /3 - 10%);
+        padding: 10px;
     }
 }
