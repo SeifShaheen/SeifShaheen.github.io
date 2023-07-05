@@ -3,6 +3,9 @@
     scroll-behavior: smooth;
     transition: 0.5s;
 }
+html{
+    overflow-x: hidden;
+}
 body{
     margin: 0;
     width: 100%;
